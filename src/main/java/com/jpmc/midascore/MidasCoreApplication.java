@@ -10,4 +10,10 @@ public class MidasCoreApplication {
         SpringApplication.run(MidasCoreApplication.class, args);
     }
 
+    @org.springframework.context.annotation.Bean
+    public org.springframework.web.client.RestTemplate restTemplate(
+            org.springframework.boot.web.client.RestTemplateBuilder builder) {
+        return builder.build();
+    }
+
 }
